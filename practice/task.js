@@ -17,7 +17,7 @@ var buttons = document.getElementsByTagName("button");
 //     }
 // })
 
-for(var i=1;i<buttons.length;i++){
+for(var i=0;i<buttons.length;i++){
     // var x = i
     // buttons[i].addEventListener("click",function(){  
         function run(){
