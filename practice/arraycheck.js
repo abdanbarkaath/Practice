@@ -26,20 +26,20 @@ function check(val){
     x = "abcdefgh";
     var l = val.length;
     var t=1;
-    for(var i = 0;i<val.length;i++){
+    for(var i = 0;i<x.length;i++){
         if(val[0] == x[i]){
             for(var j = 1 ;j<l;j++){
                 if(val[j] == x[i+j]){
-                    console.log(l);
                     t++;
-                    console.log(t);
                     if(t == l){
                         console.log("yes");
                     }
                 }
             }
+        }else{
+            console.log("no match");
         }
     }
 }
 
-check("cdef")
+check("fgh")
