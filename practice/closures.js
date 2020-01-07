@@ -18,10 +18,10 @@
 // }
 // var i;
 // for(i in person){
-    // if(i === 1|| i===2 ||i == 3){
-    //     p.push(i)
-    //     console.log(person[i]);
-    // }
+// if(i === 1|| i===2 ||i == 3){
+//     p.push(i)
+//     console.log(person[i]);
+// }
 
 
 // store.forEach(function(i){
@@ -47,27 +47,84 @@
 
 //practice .html very very important
 
-function run(){
-    var i=0;
-    var x = document.getElementById("add");
-    x.addEventListener("click",function(){
-        i++;
-        console.log(i);
-    })
-}
-run();
+// function run(){
+//     var i=0;
+//     var x = document.getElementById("add");
+//     x.addEventListener("click",function(){
+//         i++;
+//         console.log(i);
+//     })
+// }
+// var i=0;
+// function run1(){
+//     var x = document.getElementById("add2");
+//     x.addEventListener("click",function(){
+//         i++;
+//         console.log(i);
+//     })
+// }
+// function run2(){
+//     var i=0;
+//     var x = document.getElementById("add3");
+//     x.addEventListener("click",function(){
+//         i++;
+//         console.log(i);
+//     })
+// }
+// run();
+// run1();
+// run2();
 
 /// increment when a function is called
 
-var x = 0;
-function update(){
-    x++;
-    console.log(x);
+// function update() {
+//     var x = 0;
+//     function go() {
+//         x++;
+//         console.log(x);
+//     }
+//     for (var i = 1; i < 5; i++) {
+//         go();
+//     }
+// }
+// update();
+
+
+//checking hoisting
+// var d = 1
+// function a() {
+//     var x = d;
+//     function b() {
+//         var y = x;
+//         function c() {
+//             var z = y;
+//             console.log(z);
+//         }
+//         c();
+//     }
+//     b();
+// }
+
+// a();
+
+
+//multiple arguments
+
+function one(x){
+    var a = x
+    console.log(a);
+    function two(){
+        var b = a + 1;
+        console.log(b);
+        function three(){
+            var c = b+1
+            console.log(c); 
+        }
+        return three;
+    }
+    return two;
 }
-for( var i=1;i<5;i++){
-    update();
-}
 
 
 
-
+one(5)()();
