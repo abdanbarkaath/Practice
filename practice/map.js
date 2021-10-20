@@ -52,7 +52,7 @@ var reduces = people.reduce((ac,val)=>ac.id>val.id?ac:val);
 console.log(reduces);//returns only one value which is statisfied
 
 var finds = people.find(val=>val.name==="abdan");
-console.log(finds);//searches and returns the first value from the array
+console.log(finds+" finds");//searches and returns the first value from the array
 
 var somes = people.some(val=>val.id>20);
 console.log(somes);//returns true or false
@@ -65,3 +65,6 @@ console.log(reduced);//reduce to calculate the sum
 
 var includes = people.includes(Object);
 console.log(includes);
+
+var somes = people.some(val => val.id === 1)
+console.log(somes);//searches an object inside an array

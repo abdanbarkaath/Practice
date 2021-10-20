@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <style>
+    .maindiv {
+      width: 500px;
+      height: 500px;
+      display: inline-block;
+      border: 1px solid black;
+      padding: 10px;
+    }
+    #div1 {
+      height: 30%;
+      border: 1px solid black;
+      margin-bottom: 10px;
+    }
+    #div2 {
+      height: 30%;
+      border: 1px solid black;
+      margin-bottom: 10px;
+    }
+    #div3 {
+      height: 33%;
+      border: 1px solid black;
+    }
+    .inputdivs {
+      display: inline-block;
+      position: relative;
+      top: -450px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+    }
+    .endbtn {
+      margin-top: 5px;
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div class="maindiv">
+      <div id="div1"></div>
+      <div id="div2"></div>
+      <div id="div3"></div>
+    </div>
+
+    <div class="inputdivs">
+      <input id="inputb" type="text" />
+      <button class="btn" onclick="update()">Start</button>
+      <button class="endbtn" onclick="end()">End</button>
+    </div>
+  </body>
+
+
+
+  <script>
+    var inp = document.getElementById("inputb");
+    var redSignal = document.getElementById("div1");
+    var yellowSignal = document.getElementById("div2");
+    var greenSignal = document.getElementById("div3");
+    function update(e) {
+      if (inp.value.toLowerCase() === "red") {
+        redSignal.style.backgroundColor = "red";
+        yellowSignal.style.backgroundColor = "white";
+        greenSignal.style.backgroundColor = "white";
+      } else if (inp.value.toLowerCase() === "yellow") {
+        redSignal.style.backgroundColor = "white";
+        yellowSignal.style.backgroundColor = "yellow";
+        greenSignal.style.backgroundColor = "white";
+      } else if (inp.value.toLowerCase() === "green") {
+        redSignal.style.backgroundColor = "white";
+        yellowSignal.style.backgroundColor = "white";
+        greenSignal.style.backgroundColor = "green";
+      } else {
+        redSignal.style.backgroundColor = "white";
+        yellowSignal.style.backgroundColor = "white";
+        greenSignal.style.backgroundColor = "white";
+      }
+    }
+    function end() {
+      redSignal.style.backgroundColor = "white";
+      yellowSignal.style.backgroundColor = "white";
+      greenSignal.style.backgroundColor = "white";
+    }
+  </script>
+</html>
